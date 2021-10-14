@@ -1,7 +1,7 @@
-FROM python:3.9.7-slim-bullseye
+FROM python:3.10.0-slim-bullseye
 
-RUN pip install pip --upgrade
-RUN pip install ansible==4.6.0 six
+RUN pip install pip --upgrade --no-cache-dir
+RUN pip install ansible==4.6.0 six --no-cache-dir
 
 RUN apt-get update -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
